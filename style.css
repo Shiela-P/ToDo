@@ -52,3 +52,21 @@ table {
 body {
     background-color:aqua;
 }
+
+#task_list {
+    height: 75vw;
+    width: 70vw;
+    border: 2px solid blue;
+    margin: auto;
+}
+
+#text_box{
+    margin: auto;
+    width: 30vw;
+
+}
+
+#add_button{
+    margin: auto;
+    width: 10vw;
+}
