@@ -49,8 +49,15 @@ table {
 }
 
 /* ----------- END RESET ----------- */
+:root{
+    --dk_blue: #2a529f;
+    --lt_blue: #2488F6;
+    --yellow: #f7B844;
+    --grey: #75849B;
+    --black: #0b182d;
+}
 body {
-    
+    background-color: var(--dk_blue);
 }
 
 h1{
@@ -58,16 +65,18 @@ h1{
     font-size: 5rem;
     text-align: center;
     margin-top: 2rem;
+    color: var(--yellow)
 }
 
 #task_list {
     height: 75vw;
     width: 70vw;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 2rem auto;
     max-height: 400px;
     max-width: 450px;
     overflow-y: scroll;
+    background-color: var(--lt_blue);
 }
 
 #text_box{
@@ -83,7 +92,7 @@ h1{
     margin: 0 auto;
     width: 10vw;
     min-width: 100px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-left: 0.5rem;
 }
 
