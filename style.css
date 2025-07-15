@@ -50,14 +50,14 @@ table {
 
 /* ----------- END RESET ----------- */
 :root{
-    --dk_blue: #2a529f;
-    --lt_blue: #2488F6;
-    --yellow: #f7B844;
-    --grey: #75849B;
-    --black: #0b182d;
+    --background: #ecf0f3;
+    --shadow1: #d1d9e6;
+    --shadow2: #fff;
+    --blue: #2cbfcf;
+    --lt_blue: #0fa5b6;
 }
 body {
-    background-color: var(--dk_blue);
+    background-color: var(--background);
 }
 
 h1{
@@ -65,7 +65,7 @@ h1{
     font-size: 5rem;
     text-align: center;
     margin-top: 2rem;
-    color: var(--yellow)
+    color: var(--blue)
 }
 
 #task_list {
@@ -76,15 +76,23 @@ h1{
     max-height: 400px;
     max-width: 450px;
     overflow-y: scroll;
-    background-color: var(--lt_blue);
+    background-color: var(--background);
+    box-shadow: inset 18px 18px 30px var(--shadow1), inset -18px -18px 30px var(--shadow2);
+    border-radius: 20px;
+    
+    
 }
 
 #text_box{
-    margin: 0 auto;
     width: 30vw;
     max-width: 250px;
     min-width: 200px;
     font-size: 1.5rem;
+    box-shadow: inset 8px 8px 20px var(--shadow1), inset -8px -8px 20px var(--shadow2);
+    border: none;
+    border-radius: 10px;
+    padding: .25rem .5rem .25rem .5rem;
+
 
 }
 
@@ -94,8 +102,29 @@ h1{
     min-width: 100px;
     font-size: 1.25rem;
     margin-left: 0.5rem;
+    background-color: var(--blue);
+    color: var(--shadow2);
+    border: none;
+    padding: .25rem .5rem .25rem .5rem;
+    border-radius: 8px;
+   box-shadow: 10px 10px 20px var(--shadow1), -10px -10px 20px var(--shadow2);
+    
+}
+
+#add_button:hover{
+    color: var(--blue);
+    background-color: var(--background);
+    outline: solid var(--blue);
 }
 
 #inputs{
     text-align: center;
+}
+
+input:focus {
+    outline: solid var(--lt_blue);
+}
+
+input::placeholder{
+    color: #2cbfcf;
 }
