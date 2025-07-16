@@ -35,3 +35,6 @@ addButton.addEventListener("click", addNewTask)
 //TO DO (haha very ironic)
 //Make functions to clear input (so that user can enter something new) and ul (so that it doesn't keep duplicating what we already have) 
 //Clearing UL needs to be done before new tasks are added, otherwise it will clear out the new tasks and everything else
+//Make it so that "enter" on keyboard adds task to list
+//Do not allow empty tasks to join task list
+//Make scrollbar always visible?
