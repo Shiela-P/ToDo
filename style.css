@@ -55,6 +55,7 @@ table {
     --shadow2: #fff;
     --blue: #2cbfcf;
     --lt_blue: #0fa5b6;
+    --gray: #656565;
 }
 body {
     background-color: var(--background);
@@ -84,6 +85,7 @@ h1{
 }
 
 #text_box{
+    color: var(--gray);
     width: 30vw;
     max-width: 250px;
     min-width: 200px;
@@ -127,4 +129,11 @@ input:focus {
 
 input::placeholder{
     color: #2cbfcf;
+}
+
+li{
+    color: var(--gray);
+    padding: 1rem 0 .5rem 1rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
 }

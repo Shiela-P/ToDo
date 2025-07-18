@@ -8,6 +8,8 @@ const taskList = document.getElementById("task_list");
 const tasks = [];
 //Function to loop through array, adding each item to ul
 const addTaskToList = () => {
+    //Clear out previous li
+    taskList.innerHTML= "";
     //loop through array
     for(const task of tasks){
         //create new list item
@@ -17,6 +19,10 @@ const addTaskToList = () => {
         //append li to ul
         taskList.appendChild(newTask);
     }
+    //clear input box
+    textBox.value = "";
+    //return cursor to input box
+    textBox.focus();
 }
 // Function to add task to array
 const addTaskToArray = () => {
@@ -31,6 +37,7 @@ const addNewTask = () => {
 }
 
 addButton.addEventListener("click", addNewTask)
+//Allow task to be added using return/enter
 
 //TO DO (haha very ironic)
 //Make functions to clear input (so that user can enter something new) and ul (so that it doesn't keep duplicating what we already have) 
