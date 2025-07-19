@@ -38,6 +38,11 @@ const addNewTask = () => {
 
 addButton.addEventListener("click", addNewTask)
 //Allow task to be added using return/enter
+textBox.addEventListener("keydown", (event) => {
+    if(event.key === "Enter"){
+        addNewTask();
+    }
+})
 
 //TO DO (haha very ironic)
 //Make functions to clear input (so that user can enter something new) and ul (so that it doesn't keep duplicating what we already have) 
