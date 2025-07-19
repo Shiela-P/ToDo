@@ -48,6 +48,6 @@ textBox.addEventListener("keydown", (event) => {
 })
 
 //TO DO (haha very ironic)
-//Do not allow empty tasks to join task list
-//Make scrollbar always visible?
-//Make focus start on text box
+//When task is hovered highlight green
+//When task is clicked, move to bottom of list and strikethrough
+//Allow tasks to be re-added by clicking

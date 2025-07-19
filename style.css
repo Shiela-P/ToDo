@@ -56,6 +56,7 @@ table {
     --blue: #2cbfcf;
     --lt_blue: #0fa5b6;
     --gray: #656565;
+    --green: #7dd460;
 }
 body {
     background-color: var(--background);
@@ -94,7 +95,6 @@ h1{
     border: none;
     border-radius: 10px;
     padding: .25rem .5rem .25rem .5rem;
-
 
 }
 
@@ -136,4 +136,8 @@ li{
     padding: 1rem 0 .5rem 1rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+li:hover{
+    background-color: var(--green);
 }
