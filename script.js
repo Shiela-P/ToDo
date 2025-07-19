@@ -26,8 +26,11 @@ const addTaskToList = () => {
 }
 // Function to add task to array
 const addTaskToArray = () => {
-    tasks.push(textBox.value);
-    // alert(tasks);
+    //Only add task if not empty
+    if(textBox.value !== "" ){
+        tasks.push(textBox.value);
+        // alert(tasks);
+    }
 };
 
 //Make tasks appear on screen
@@ -45,8 +48,6 @@ textBox.addEventListener("keydown", (event) => {
 })
 
 //TO DO (haha very ironic)
-//Make functions to clear input (so that user can enter something new) and ul (so that it doesn't keep duplicating what we already have) 
-//Clearing UL needs to be done before new tasks are added, otherwise it will clear out the new tasks and everything else
-//Make it so that "enter" on keyboard adds task to list
 //Do not allow empty tasks to join task list
 //Make scrollbar always visible?
+//Make focus start on text box
