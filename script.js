@@ -47,7 +47,21 @@ textBox.addEventListener("keydown", (event) => {
     }
 })
 
+taskList.addEventListener("click", (event)=>{
+    //Only activate if user clicks on li within task list
+    const clickedLi = event.target.closest("li");
+    if(clickedLi){
+        taskList.appendChild(clickedLi);
+        clickedLi.style.textDecoration = "line-through";
+        clickedLi.style.opacity = "0.5";
+    }
+})
+
 //TO DO (haha very ironic)
-//When task is hovered highlight green
-//When task is clicked, move to bottom of list and strikethrough
-//Allow tasks to be re-added by clicking
+//When task is clicked move to bottom of task list
+//Add strike through
+//Make text lighter color
+// How to make completed items stay comlete: Maybe make a second "completed tasks" list and generate them that way"
+
+
+
