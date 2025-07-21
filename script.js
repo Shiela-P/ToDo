@@ -4,8 +4,10 @@ const addButton = document.getElementById("add_button");
 const textBox = document.getElementById("text_box");
 //Task list (obviously)
 const taskList = document.getElementById("task_list");
-//array to hold tasks
+//array to hold incomplete tasks
 const tasks = [];
+//array to hold completed tasks
+const completed = [];
 //Function to loop through array, adding each item to ul
 const addTaskToList = () => {
     //Clear out previous li
@@ -19,23 +21,35 @@ const addTaskToList = () => {
         //append li to ul
         taskList.appendChild(newTask);
     }
+    //For completed tasks
+    for(const task of completed){
+        //create new list item (strikethrough and lower opacity)
+        //create new list item
+        const newTask = document.createElement("li");
+        //add content from array
+        newTask.innerText = task;
+        //append li to ul
+        taskList.appendChild(newTask);
+        newTask.textDecoration = "line-through";
+
+    }
     //clear input box
     textBox.value = "";
     //return cursor to input box
     textBox.focus();
 }
 // Function to add task to array
-const addTaskToArray = () => {
+const addTaskToArray = (arrayName) => {
     //Only add task if not empty
     if(textBox.value !== "" ){
-        tasks.push(textBox.value);
+        arrayName.push(textBox.value);
         // alert(tasks);
     }
 };
 
 //Make tasks appear on screen
 const addNewTask = () => {
-    addTaskToArray();
+    addTaskToArray(tasks);
     addTaskToList();
 }
 
@@ -51,9 +65,10 @@ taskList.addEventListener("click", (event)=>{
     //Only activate if user clicks on li within task list
     const clickedLi = event.target.closest("li");
     if(clickedLi){
-        taskList.appendChild(clickedLi);
-        clickedLi.style.textDecoration = "line-through";
-        clickedLi.style.opacity = "0.5";
+        //Move task from tasks to completed
+        //Get index of li
+        //Move array item with matching index from tasks to completed
+        //Rerun task populating functions
     }
 })
 
