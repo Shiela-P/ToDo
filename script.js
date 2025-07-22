@@ -65,10 +65,13 @@ taskList.addEventListener("click", (event)=>{
     //Only activate if user clicks on li within task list
     const clickedLi = event.target.closest("li");
     if(clickedLi){
-        //Move task from tasks to completed
         //Get index of li
-        //Move array item with matching index from tasks to completed
-        //Rerun task populating functions
+        const screenTasks = Array.from(taskList.children);
+        const index = screenTasks.indexOf(clickedLi);
+        alert(index);
+        //Move matching index from tasks to completed
+        
+        //Repopulate screen information
     }
 })
 
