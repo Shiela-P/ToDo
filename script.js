@@ -68,18 +68,15 @@ taskList.addEventListener("click", (event)=>{
         //Get index of li
         const screenTasks = Array.from(taskList.children);
         const index = screenTasks.indexOf(clickedLi);
-        alert(index);
-        //Move matching index from tasks to completed
-        
-        //Repopulate screen information
+        //Remove from tasks
+        tasks.splice(index, 1);
+        //Display tasks back to screen
+        addNewTask();
+      
     }
 })
 
-//TO DO (haha very ironic)
-//When task is clicked move to bottom of task list
-//Add strike through
-//Make text lighter color
-// How to make completed items stay comlete: Maybe make a second "completed tasks" list and generate them that way"
+
 
 
 
